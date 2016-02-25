@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MergeSortTest
 {
 double[] arr;
@@ -79,17 +81,14 @@ arr[lowerBound+j]=workspace[j];
 
 public static void main(String[] args)
 {
-
+Scanner sc=new Scanner(System.in);
 MergeSortTest is=new MergeSortTest(7);
-is.insert(22);
-is.insert(2);
-is.insert(32);
-is.insert(552);
-is.insert(26);
-is.insert(1);
-is.insert(44);
+for(int i=0;i<7;i++)
+{
+  is.insert(sc.nextInt());
+}
+is.display();
 is.mergeSort();
 is.display();
-
 }
 }
